@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="framework/jquery.1.11.1.min.js"></script>
+    <script src="javascripts/app.js"></script>
+    <title>PhoneLazyload</title>
+    <style>
+        canvas {
+            width: 100px;
+            min-height: 100px;
+            background: #fff url("images/01.gif") center center;
+            /*background-size: 100%;*/
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="canbox">
+            <canvas data-src='images\bkc.jpg'></canvas>
+            <canvas data-src='images\jbs.png'></canvas>
+        </div>
+    </div>
+</body>
+<script>
+    $(function() {
+        $('#canbox').myCanvas();
+    })
+</script>
+
+</html>
