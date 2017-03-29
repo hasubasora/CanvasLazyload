@@ -15,7 +15,7 @@ var gulp = require('gulp'),
     fileinclude = require('gulp-file-include'); //分离html
 
 gulp.task('default', ['jshint'], function() {
-    gulp.start('minifyjs');
+    // gulp.start('minifyjs');
     return runSequence(['clean'], ['build'], ['serve', 'watch'], ['fileinclude']);
 });
 
@@ -24,7 +24,7 @@ gulp.task('clean', function(callback) {
 });
 
 gulp.task('build', function(callback) {
-    return runSequence(['compass', 'staticFiles'], callback);
+    return runSequence(['compass', 'minifyjs', 'staticFiles'], callback);
 });
 
 gulp.task('compass', function() {
